@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/appTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/atomic_age"
+            android:gravity="center_horizontal"
+            android:text="Miwok-English\nDictionary"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        app:contentPadding="5dp"
+        android:id="@+id/mainCard"
+        android:layout_below="@id/appTitle">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView android:id="@+id/numbers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="numbers"
+                android:textSize="17dp"
+                android:textColor="@color/titleDisableColor"/>
+
+            <TableRow android:id="@+id/nfSeperator"
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:background="@color/colorPrimary"
+                android:layout_toRightOf="@id/numbers"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView android:id="@+id/family"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="family"
+                android:textSize="17dp"
+                android:textColor="@color/titleDisableColor"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/nfSeperator"/>
+
+            <TableRow android:id="@+id/fcSeperator"
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:background="@color/colorPrimary"
+                android:layout_toRightOf="@id/family"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView android:id="@+id/colors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="colors"
+                android:textSize="17dp"
+                android:textColor="@color/titleDisableColor"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/fcSeperator"/>
+
+            <TableRow android:id="@+id/cpSeperator"
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:background="@color/colorPrimary"
+                android:layout_toRightOf="@id/colors"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView android:id="@+id/phrases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="phrases"
+                android:textSize="17dp"
+                android:textColor="@color/titleDisableColor"
+                android:layout_toRightOf="@id/cpSeperator"
+                android:layout_marginLeft="10dp"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rootView"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:scrollbars="vertical"
+            android:layout_below="@id/mainCard"/>
+
+</RelativeLayout>
