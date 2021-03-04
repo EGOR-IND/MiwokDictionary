@@ -1,9 +1,12 @@
 package com.example.miwokdictionary;
 
 public class User {
-    public String word;
-    public String meaning;
-    public int image;
+
+    private final int NO_IMAGE_PROVIDED = -1;
+
+    private String word;
+    private String meaning;
+    private int image = NO_IMAGE_PROVIDED;
 
     public User(String word, String meaning, int image){
         this.word = word;
@@ -21,5 +24,9 @@ public class User {
 
     public int getImage(){
         return image;
+    }
+
+    public boolean hasImage() {
+        return image != NO_IMAGE_PROVIDED;
     }
 }

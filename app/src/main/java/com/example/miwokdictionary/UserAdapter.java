@@ -48,7 +48,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.MyViewHolder> 
 
         text.setText(dataSet.get(position).getWord());
         text2.setText(dataSet.get(position).getMeaning());
-        image.setImageResource(dataSet.get(position).getImage());
+
+        if (dataSet.get(position).hasImage()) {
+            image.setImageResource(dataSet.get(position).getImage());
+        }
     }
 
     @Override

@@ -7,6 +7,7 @@
     android:layout_marginRight="15dp"
     android:layout_marginTop="10dp"
     android:layout_marginBottom="10dp"
+    app:contentPadding="10dp"
     app:cardCornerRadius="15dp"
     app:cardElevation="5dp">
 
@@ -16,8 +17,7 @@
 
         <ImageView android:id="@+id/image"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/number_one"/>
+            android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/text"
@@ -27,7 +27,7 @@
             android:layout_toRightOf="@id/image"
             android:text="lutti"
             android:textColor="@color/cardview_dark_background"
-            android:textSize="30dp" />
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/text2"
@@ -37,7 +37,7 @@
             android:layout_toRightOf="@id/image"
             android:text="one"
             android:textColor="@android:color/darker_gray"
-            android:textSize="20dp" />
+            android:textSize="18sp" />
 
         <ImageView
             android:layout_width="wrap_content"

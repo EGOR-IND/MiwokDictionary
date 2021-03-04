@@ -260,12 +260,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         numbersListMiwok.add("yoowutis");
         numbersListMiwok.add("әnni'nem");
 
-        ArrayList<phrases> data = new ArrayList<phrases>();
+        ArrayList<User> data = new ArrayList<User>();
         for(int i=0;i<9;i++){
-            data.add(new phrases(numbersListMiwok.get(i), numbersListEng.get(i)));
+            data.add(new User(numbersListMiwok.get(i), numbersListEng.get(i), -1));
         }
 
-        RecyclerView.Adapter adapter = new phrasesAdapter(data);
+        RecyclerView.Adapter adapter = new UserAdapter(data);
 
         RecyclerView recyclerView = (RecyclerView)findViewById(R.id.rootView);
         recyclerView.setHasFixedSize(true);
